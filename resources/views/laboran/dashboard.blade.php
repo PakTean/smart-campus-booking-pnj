@@ -12,7 +12,7 @@
     <nav class="bg-white shadow-sm border-b border-slate-200 px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <!-- Logo PNJ Resmi -->
-            <img src="https://www.pnj.ac.id/images/logo_pnj.jpg" alt="Logo PNJ" class="h-12 w-auto object-contain">
+            <img src="{{ asset('img/logo_pnj.jpg') }}" alt="Logo PNJ" class="h-12 w-auto object-contain">
             <div>
                 <h1 class="text-xl font-bold text-emerald-600">Smart Campus (Panel Laboran)</h1>
                 <p class="text-xs text-slate-500">Log In Sebagai: {{ Auth::user()->name }}</p>
