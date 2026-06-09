@@ -15,8 +15,8 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    // Group Halaman Laboran (Hanya Role Laboran)
-    Route::middleware('role:laboran')->prefix('laboran')->name('laboran.')->group(function () {
+    // Group Halaman Laboran (Diubah nama grupnya menjadi admin. agar cocok dengan Login Controller)
+    Route::middleware('role:laboran')->prefix('laboran')->name('admin.')->group(function () {
         Route::get('/dashboard', [LaboranController::class, 'dashboard'])->name('dashboard');
         Route::patch('/reservations/{id}/status', [LaboranController::class, 'updateStatus'])->name('reservations.status');
     });
